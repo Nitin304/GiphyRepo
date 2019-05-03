@@ -1,0 +1,26 @@
+<h2>
+  Giphy
+</h2>
+<div>
+  <label>
+    <input [(ngModel)]="search" placeholder="Enter the search text"/>
+  </label>
+  <button (click)="callApi()">Search</button>
+</div>
+
+
+
+<table style="width:100%">
+  <tr>
+    <th>Title</th>
+    <th>Type</th> 
+    <th>Source</th>
+  </tr>
+  <tr *ngFor="let image of data" >
+    <td>{{image.title}}</td>
+    <td>{{image.type}}</td> 
+    <td>{{image.source}}</td>
+  </tr>
+  <tr *ngIf="data.length==0"><td  colspan="100">No Records Found</td></tr>
+  
+</table>

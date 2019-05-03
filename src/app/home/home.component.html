@@ -1,0 +1,11 @@
+<h2>
+  Home
+</h2>
+<button (click)="toggleTime()">Toggle Date</button>
+<div *ngIf="showTime" class="time">
+  <label>{{ date}}</label>
+</div>
+
+<div  class="time">
+  <label>{{ time}}</label>
+</div>
