@@ -15,7 +15,7 @@ export class GiphyComponent implements OnInit {
   url:string= "https://api.giphy.com/v1/gifs/search?api_key=fyM32Vk53GV1gkk2qb7OQ025cmR0s6nW&q=";
   secondUrl:string="&limit=25&offset=0&rating=G&lang=en";
   data:any={
-    data:[]
+    data:[] 
   };
   
   constructor(private giphyService: FetchGiphyDataService) { }
@@ -33,7 +33,7 @@ export class GiphyComponent implements OnInit {
     console.log(url);
 
     this.giphyService.fetchGiphyData(url).subscribe((data)=>{
-      this.data = data.data.slice(0,5);
+      this.data = data['data'].slice(0,5);
       console.log(this.data);
     })
    
