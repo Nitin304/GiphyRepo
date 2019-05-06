@@ -14,7 +14,10 @@ export class GiphyComponent implements OnInit {
   apiKey:string = "fyM32Vk53GV1gkk2qb7OQ025cmR0s6nW";
   url:string= "https://api.giphy.com/v1/gifs/search?api_key=fyM32Vk53GV1gkk2qb7OQ025cmR0s6nW&q=";
   secondUrl:string="&limit=25&offset=0&rating=G&lang=en";
-  data:any[]=[];
+  data:any={
+    data:[]
+  };
+  
   constructor(private giphyService: FetchGiphyDataService) { }
 
   ngOnInit() {
